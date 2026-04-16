@@ -62,11 +62,19 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 });
             });
+
+            carregarUsuarios();
         }
         catch (Exception e)
         {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        carregarUsuarios();
     }
 
     private void carregarUsuarios() {
@@ -79,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
                 Contato ctt = new Contato();
                 ctt.id = cursor.getInt(0);
                 ctt.nome = cursor.getString(1);
-                ctt.email = cursor.getString(2);
-                ctt.telefone = cursor.getString(3);
+                ctt.email = cursor.getString(3);
+                ctt.telefone = cursor.getString(2);
                 ctt.categoria = cursor.getString(4);
                 ctt.cidade = cursor.getString(5);
 
