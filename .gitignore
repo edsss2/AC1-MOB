@@ -13,3 +13,51 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+## --- IDE - Android Studio / IntelliJ ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.settings
+.classpath
+
+## --- Build Output ---
+bin/
+gen/
+out/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+## --- Gradle ---
+.gradle/
+build/
+gradlew
+gradlew.bat
+gradle/wrapper/gradle-wrapper.jar
+
+## --- Local Configs (SENSÍVEL) ---
+local.properties
+.bundle/
+
+## --- Log & Temp ---
+*.log
+*.tmp
+*.bak
+*.swp
+
+## --- System Files ---
+.DS_Store
+Thumbs.db
+
+## --- Android specific (Segurança!) ---
+*.apk
+*.ap_
+*.aab
+*.jks
+*.keystore
+*.p12
+google-services.json
